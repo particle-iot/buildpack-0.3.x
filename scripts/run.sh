@@ -6,7 +6,10 @@ export INPUT_DIR=/input
 export OUTPUT_DIR=/output
 export CACHE_DIR=/cache
 export WORKSPACE_DIR=/workspace
+# 0.3.x specific
 export USER_DIR=workspace
+export TARGET=core-firmware
+export TARGETDIR=$WORKSPACE_DIR/
 
 # Start logging to file
 exec > >(tee $OUTPUT_DIR/run.log)
