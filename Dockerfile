@@ -1,11 +1,5 @@
-FROM ubuntu:vivid
+FROM particle/buildpack-base
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update
-RUN apt-get -y install gcc-arm-none-eabi make git
-RUN apt-get -y install isomd5sum
+RUN apt-get -y install gcc-arm-none-eabi make isomd5sum
 
 ADD . /
-VOLUME ["/input", "/ouput", "/cache"]
-CMD ["/scripts/run.sh"]
