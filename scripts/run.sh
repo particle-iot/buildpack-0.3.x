@@ -1,8 +1,15 @@
 #!/bin/bash
 
-INPUT_DIR=/input
-OUTPUT_DIR=/ouput
-CACHE_DIR=/cache
+# Setup constants
+export INPUT_DIR=/input
+export OUTPUT_DIR=/output
+export CACHE_DIR=/cache
+export WORKSPACE_DIR=/workspace
+export USER_DIR=workspace
+
+# Start logging to file
+exec > >(tee $OUTPUT_DIR/run.log)
+exec 2> >(tee $OUTPUT_DIR/stderr.log)
 
 FIRMWARE_HASH=`echo -n $FIRMWARE_REPO | md5sum | awk '{ print $1 }'`
 FIRMWARE_PATH="$CACHE_DIR/$FIRMWARE_HASH/core-firmware"
@@ -15,3 +22,7 @@ mkdir -p "$CACHE_DIR/$FIRMWARE_HASH"
 # As we won't support this anymore, branches can be hardcoded
 /scripts/clone.sh https://github.com/spark/core-common-lib.git#compile-server2 "$FIRMWARE_PATH/../core-common-lib"
 /scripts/clone.sh https://github.com/spark/core-communication-lib.git#compile-server2 "$FIRMWARE_PATH/../core-communication-lib"
+
+source /scripts/pre-build.sh
+source /scripts/build.sh
+source /scripts/post-build.sh
