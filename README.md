@@ -1,4 +1,5 @@
 # Buildpack for 0.3.x firmware
+In little bit more than 100 lines of code.
 
 ## Building image
 

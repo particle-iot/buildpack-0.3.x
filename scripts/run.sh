@@ -1,4 +1,5 @@
 #!/bin/bash
+TIME_START=`date +%s.%N`
 
 # Setup constants
 export INPUT_DIR=/input
@@ -26,3 +27,7 @@ mkdir -p "$CACHE_DIR/$FIRMWARE_HASH"
 source /scripts/pre-build.sh
 source /scripts/build.sh
 source /scripts/post-build.sh
+
+TIME_END=`date +%s.%N`
+RUNTIME=`echo "$TIME_END $TIME_START" | awk '{print $1-$2}'`
+echo "Finished in: $RUNTIME seconds"

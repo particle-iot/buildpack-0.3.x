@@ -4,7 +4,6 @@ CPP_SRCS += $(shell find $(INPUT_DIR) -name *.cpp)
 ALLOBJ   += $(CPP_SRCS:$(INPUT_DIR)/%.cpp=$(WORKSPACE_DIR)/%.o)
 ALLDEPS += $(CPP_SRCS:$(INPUT_DIR)/%.cpp=$(WORKSPACE_DIR)/%.d)
 
-$(info $(CPP_SRCS))
 # Each subdirectory must supply rules for building sources it contributes
 $(WORKSPACE_DIR)/%.o: $(INPUT_DIR)/%.cpp
 	@echo 'Building user file: $<'
