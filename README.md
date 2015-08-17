@@ -3,6 +3,8 @@ In little bit more than 100 lines of code.
 
 ## Building image
 
+**Before building this image, build [buildpack-base](https://github.com/suda/buildpack-base).**
+
 ```bash
 $ git clone git@github.com:suda/buildpack-0.3.x.git
 $ cd buildpack-0.3.x
