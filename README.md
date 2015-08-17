@@ -6,9 +6,10 @@ In little bit more than 100 lines of code.
 **Before building this image, build [buildpack-base](https://github.com/suda/buildpack-base).**
 
 ```bash
-$ git clone git@github.com:suda/buildpack-0.3.x.git
-$ cd buildpack-0.3.x
-$ docker build -t particle/buildpack-0.3.x .
+$ export BUILDPACK_IMAGE=0.3.x
+$ git clone "git@github.com:suda/buildpack-${BUILDPACK_IMAGE}.git"
+$ cd buildpack-$BUILDPACK_IMAGE
+$ docker build -t particle/buildpack-$BUILDPACK_IMAGE .
 ```
 
 ## Running
