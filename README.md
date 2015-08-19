@@ -3,7 +3,7 @@ In little bit more than 100 lines of code.
 
 ## Building image
 
-**Before building this image, build [buildpack-base](https://github.com/suda/buildpack-base).**
+**Before building this image, build [buildpack-arduino-preprocessor](https://github.com/suda/buildpack-arduino-preprocessor).**
 
 ```bash
 $ export BUILDPACK_IMAGE=0.3.x
