@@ -1,13 +1,13 @@
 # Buildpack for 0.3.x firmware
-In little bit more than 100 lines of code.
+Buildpack for legacy (0.3.x) Particle firmware.
 
 ## Building image
 
-**Before building this image, build [buildpack-arduino-preprocessor](https://github.com/suda/buildpack-arduino-preprocessor).**
+**Before building this image, build or pull [buildpack-arduino-preprocessor](https://github.com/spark/buildpack-arduino-preprocessor).**
 
 ```bash
 $ export BUILDPACK_IMAGE=0.3.x
-$ git clone "git@github.com:suda/buildpack-${BUILDPACK_IMAGE}.git"
+$ git clone "git@github.com:spark/buildpack-${BUILDPACK_IMAGE}.git"
 $ cd buildpack-$BUILDPACK_IMAGE
 $ docker build -t particle/buildpack-$BUILDPACK_IMAGE .
 ```
@@ -34,6 +34,6 @@ After build `~/tmp/output` will be propagated with:
 * `run.log` - `stdout` combined with `stderr`
 * `stderr.log` - contents of `stderr`, usefull to parse `gcc` errors
 
-**Files only available if compilation succeeded:**
-* `core-firmware.bin` - compiled firmware
+**Files only available if compilation succeeds:**
+* `firmware.bin` - compiled firmware
 * `memory-use.log` - firmware memory use
