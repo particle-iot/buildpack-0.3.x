@@ -2,7 +2,7 @@
 Buildpack for legacy (0.3.x) Particle firmware.
 
 | |
-|-|
+|---|
 |  [Particle firmware](https://github.com/spark/firmware-buildpack-builder)  |
 | [HAL](https://github.com/spark/buildpack-hal) / **Legacy (you are here)** |
 | [Wiring preprocessor](https://github.com/spark/buildpack-arduino-preprocessor) |
