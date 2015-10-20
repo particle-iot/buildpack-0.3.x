@@ -1,6 +1,15 @@
 # Buildpack for 0.3.x firmware
 Buildpack for legacy (0.3.x) Particle firmware.
 
+| |
+|-|
+|  [Particle firmware](https://github.com/spark/firmware-buildpack-builder)  |
+| [HAL](https://github.com/spark/buildpack-hal) / **Legacy (you are here)** |
+| [Wiring preprocessor](https://github.com/spark/buildpack-arduino-preprocessor) |
+| [Base](https://github.com/spark/buildpack-base) |
+
+This image inherits [Wiring preprocessor](https://github.com/spark/buildpack-arduino-preprocessor) and calls [`preprocess-ino` function](https://github.com/spark/buildpack-arduino-preprocessor#running) before doing build.
+
 ## Building image
 
 **Before building this image, build or pull [buildpack-arduino-preprocessor](https://github.com/spark/buildpack-arduino-preprocessor).**
