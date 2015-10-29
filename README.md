@@ -1,6 +1,8 @@
 # Buildpack for 0.3.x firmware
 Buildpack for legacy (0.3.x) Particle firmware.
 
+[![Build Status](https://magnum.travis-ci.com/spark/buildpack-0.3.x.svg?token=M4rP8W5QPGszZyem6TGE&branch=master)](https://magnum.travis-ci.com/spark/buildpack-0.3.x)
+
 | |
 |---|
 |  [Particle firmware](https://github.com/spark/firmware-buildpack-builder)  |
