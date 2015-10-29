@@ -1,4 +1,4 @@
-FROM particle/buildpack-arduino-preprocessor
+FROM particle/buildpack-arduino-preprocessor:0.0.1
 
 RUN apt-get -y install gcc-arm-none-eabi make isomd5sum
 
