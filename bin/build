@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Export environment variables
+export USER_DIR=workspace
+export TARGET=core-firmware
+export TARGETDIR=$WORKSPACE_DIR/
+export FIRMWARE_HASH=`echo -n $FIRMWARE_REPO | md5sum | awk '{ print $1 }'`
+export FIRMWARE_PATH="$CACHE_DIR/$FIRMWARE_HASH/core-firmware"
+
 # Download fimware to cache dir
 mkdir -p "$CACHE_DIR/$FIRMWARE_HASH"
 clone-repo $FIRMWARE_REPO $FIRMWARE_PATH
@@ -11,5 +18,13 @@ clone-repo https://github.com/spark/core-communication-lib.git#compile-server2 "
 
 mount -o bind $WORKSPACE_DIR $FIRMWARE_PATH/$USER_DIR
 
-# Preprocess .ino files
-preprocess-ino $WORKSPACE_DIR
+cd $FIRMWARE_PATH/build
+make
+
+if [ $? -eq 0 ]; then
+  copy-to-output $WORKSPACE_DIR/*.bin
+  log-size $WORKSPACE_DIR/core-firmware.elf
+
+  # Normalize firmware binary name
+  mv $OUTPUT_DIR/core-firmware.bin $OUTPUT_DIR/firmware.bin
+fi

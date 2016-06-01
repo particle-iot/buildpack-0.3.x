@@ -1,5 +1,0 @@
-export USER_DIR=workspace
-export TARGET=core-firmware
-export TARGETDIR=$WORKSPACE_DIR/
-export FIRMWARE_HASH=`echo -n $FIRMWARE_REPO | md5sum | awk '{ print $1 }'`
-export FIRMWARE_PATH="$CACHE_DIR/$FIRMWARE_HASH/core-firmware"

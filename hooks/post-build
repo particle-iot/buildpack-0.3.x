@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ $? -eq 0 ]; then
-  copy-to-output $WORKSPACE_DIR/*.bin
-  log-size $WORKSPACE_DIR/core-firmware.elf
-
-  # Normalize firmware binary name
-  mv $OUTPUT_DIR/core-firmware.bin $OUTPUT_DIR/firmware.bin
-fi
