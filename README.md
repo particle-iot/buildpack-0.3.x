@@ -1,7 +1,7 @@
 # Buildpack for 0.3.x firmware
 Buildpack for legacy (0.3.x) Particle firmware.
 
-[![Build Status](https://travis-ci.org/spark/buildpack-0.3.x.svg)](https://travis-ci.org/spark/buildpack-0.3.x)
+[![Build Status](https://travis-ci.org/spark/buildpack-0.3.x.svg)](https://travis-ci.org/spark/buildpack-0.3.x) [![](https://imagelayers.io/badge/particle/buildpack-0.3.x:latest.svg)](https://imagelayers.io/?images=particle/buildpack-0.3.x:latest 'Get your own badge on imagelayers.io')
 
 | |
 |---|
