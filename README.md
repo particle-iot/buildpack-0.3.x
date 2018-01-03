@@ -5,15 +5,15 @@ Buildpack for legacy (0.3.x) Particle firmware.
 
 | |
 |---|
-|  [Particle firmware](https://github.com/spark/firmware-buildpack-builder)  |
-| [HAL](https://github.com/spark/buildpack-hal) / **Legacy (you are here)** |
-| [Base](https://github.com/spark/buildpack-base) |
+|  [Particle firmware](https://github.com/particle-iot/firmware-buildpack-builder)  |
+| [HAL](https://github.com/particle-iot/buildpack-hal) / **Legacy (you are here)** |
+| [Base](https://github.com/particle-iot/buildpack-base) |
 
-This image inherits [base buildpack](https://github.com/spark/buildpack-base).
+This image inherits [base buildpack](https://github.com/particle-iot/buildpack-base).
 
 ## Building image
 
-**Before building this image, build or pull [buildpack-base](https://github.com/spark/buildpack-base).**
+**Before building this image, build or pull [buildpack-base](https://github.com/particle-iot/buildpack-base).**
 
 ```bash
 $ export BUILDPACK_IMAGE=0.3.x
@@ -31,7 +31,7 @@ $ docker run --rm \
   -v ~/tmp/input:/input \
   -v ~/tmp/output:/output \
   -v ~/tmp/cache:/cache \
-  -e FIRMWARE_REPO=https://github.com/spark/core-firmware.git#compile-server2 \
+  -e FIRMWARE_REPO=https://github.com/particle-iot/core-firmware.git#compile-server2 \
   particle/buildpack-0.3.x
 ```
 
