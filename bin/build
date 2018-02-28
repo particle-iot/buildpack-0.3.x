@@ -13,8 +13,8 @@ clone-repo $FIRMWARE_REPO $FIRMWARE_PATH
 
 # Old firmware requires those two dependencies
 # As we won't support this anymore, branches can be hardcoded
-clone-repo https://github.com/spark/core-common-lib.git#compile-server2 "$FIRMWARE_PATH/../core-common-lib"
-clone-repo https://github.com/spark/core-communication-lib.git#compile-server2 "$FIRMWARE_PATH/../core-communication-lib"
+clone-repo https://github.com/particle-iot/core-common-lib.git#compile-server2 "$FIRMWARE_PATH/../core-common-lib"
+clone-repo https://github.com/particle-iot/core-communication-lib.git#compile-server2 "$FIRMWARE_PATH/../core-communication-lib"
 
 mount -o bind $WORKSPACE_DIR $FIRMWARE_PATH/$USER_DIR
 
