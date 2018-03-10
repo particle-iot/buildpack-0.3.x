@@ -1,7 +1,7 @@
 # Buildpack for 0.3.x firmware
 Buildpack for legacy (0.3.x) Particle firmware.
 
-[![Build Status](https://travis-ci.org/spark/buildpack-0.3.x.svg)](https://travis-ci.org/spark/buildpack-0.3.x) [![](https://imagelayers.io/badge/particle/buildpack-0.3.x:latest.svg)](https://imagelayers.io/?images=particle/buildpack-0.3.x:latest 'Get your own badge on imagelayers.io')
+[![Build Status](https://travis-ci.org/particle-iot/buildpack-0.3.x.svg)](https://travis-ci.org/particle-iot/buildpack-0.3.x) [![](https://imagelayers.io/badge/particle/buildpack-0.3.x:latest.svg)](https://imagelayers.io/?images=particle/buildpack-0.3.x:latest 'Get your own badge on imagelayers.io')
 
 | |
 |---|
@@ -17,7 +17,7 @@ This image inherits [base buildpack](https://github.com/particle-iot/buildpack-b
 
 ```bash
 $ export BUILDPACK_IMAGE=0.3.x
-$ git clone "git@github.com:spark/buildpack-${BUILDPACK_IMAGE}.git"
+$ git clone "git@github.com:particle-iot/buildpack-${BUILDPACK_IMAGE}.git"
 $ cd buildpack-$BUILDPACK_IMAGE
 $ docker build -t particle/buildpack-$BUILDPACK_IMAGE .
 ```
